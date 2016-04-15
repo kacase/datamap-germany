@@ -2,6 +2,7 @@
   "name": "datamap-germany",
   "homepage": "https://github.com/kacase/datamap-germany",
   "description": "Datamap for Germany",
+  "version": "0.0.1",
   "main": "germany.json",
   "keywords": [
     "Datamaps",
