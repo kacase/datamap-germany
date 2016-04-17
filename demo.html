@@ -1,0 +1,38 @@
+<!<!DOCTYPE html>
+<html>
+	<head>
+		<title>Datamap Example</title>
+		<style type="text/css">
+		.GM16 {
+			fill: #FA6900 !important;
+		}
+		.GM07 {
+			fill: rgba(243,134,48,0.5) !important;
+		}
+		.land {
+			transition: fill 0.5s ease;
+		}
+		.land:hover {
+			fill: rgba(0,0,0,0.3) !important;
+		}
+		.land-label {
+		fill: #777;
+		fill-opacity: .5;
+		font-size: 20px;
+		font-weight: 300;
+		text-anchor: middle;
+		font-family: Helvetica;
+		font-size: 8px;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div id="map" style="position: relative;">
+		</div>
+		
+		<script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://d3js.org/topojson.v1.js"></script>
+		<script src="demo.js"></script>
+	</body>
+</html>
