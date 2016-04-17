@@ -11,4 +11,4 @@ Get [local-web-server](https://www.npmjs.com/package/local-web-server) on NPM
 * on Linux
     `npm install -g local-web-server`
 
-Then run `ws` from the datamap-germany folder. And visit your site on [http://localhost:8080](http://localhost:8080)
+Then run `ws` from the datamap-germany folder. And visit your site on [http://localhost:8000](http://localhost:8000)
