@@ -17,3 +17,18 @@ Then run `ws` from the datamap-germany folder. And visit your site on [http://lo
 * mercator projection
 * all of the Bundesländer tagged with their [fips codes](https://en.wikipedia.org/wiki/List_of_FIPS_region_codes_(G–I)#GM:_Germany)
 * names of all of the Bundesländer shown on the map
+
+## Reproducing the map in topojson
+The map Data comes from [natural earth data’s admin 1 file](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces.zip) and got converted into topojson using gdal’s ogr2ogr and topojson itself. Using the following commands:
+
+    GeoJSON -where "ADM0_A3 IN ('DEU')" bund.json ne_10m_admin_1_states_provinces.shp
+
+
+If you want to access the biggest cities as well, you will have to get the populated places file from natural earth data as well.
+
+    ogr2ogr -f GeoJSON -where "ADM0_A3 = 'DEU' AND SCALERANK < 8" stadt.json ne_10m_populated_places.shp
+
+    topojson -o germany.json --id-property fips --properties -- bund.json stadt.json  
+
+
+Thank you to @mbostock for his [tutorial](https://bost.ocks.org/mike/map/) on creating this!
